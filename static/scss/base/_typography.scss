@@ -1,0 +1,13 @@
+// Variables
+$color-text: $black;
+$color-emph: $blue;
+$color-link-hv: $blue;
+
+// Font
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
+
+// Definitions
+html {
+  font-family: "Space Mono", "Courier New", Courier, monospace;
+  font-size: 14px;
+}
