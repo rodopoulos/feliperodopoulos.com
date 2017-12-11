@@ -1,0 +1,38 @@
+.nav {
+  list-style: none;
+}
+
+.menu {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: lowercase;
+  text-align: center;
+
+  position: absolute;
+  width: 100%;
+  height: 0;
+
+  background: $blue;
+  overflow: hidden;
+
+  // TODO: consider a more supported approach
+  display: flex;
+  align-items: center;
+}
+
+  .menu__ul {
+    margin: 0 auto;
+  }
+
+    .menu__li {
+      margin: 0.75em 0;
+    }
+
+      .menu__a {
+        color: $white;
+        text-decoration: none;
+
+        &.is-active {
+          text-decoration: underline;
+        }
+      }
