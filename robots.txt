@@ -1,0 +1,6 @@
+# www.robotstxt.org
+
+Sitemap: http://feliperodopoulos.com/sitemap.xml
+
+User-Agent: *
+Disallow:

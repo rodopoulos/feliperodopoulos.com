@@ -1,0 +1,10 @@
+<nav class="nav menu">
+  {{ $currentPage := . }}
+  {{ range .Site.Menus.main }}
+    <li class="menu__li">
+      <a href="{{.URL}}" class="menu__a {{if ($currentPage.IsMenuCurrent "main" .) }}is-active{{end}}">
+        {{ .Name }}
+      </a>
+    </li>
+  {{ end }}
+</nav>
