@@ -1,0 +1,13 @@
+.btn {
+  border: none;
+  background: $blue;
+  color: $white;
+}
+
+// TODO: not seeming right...
+.btn--menu__cls {
+  position: absolute;
+  top: 2%;
+  right: 8%;
+  font-size: 2em;
+}
