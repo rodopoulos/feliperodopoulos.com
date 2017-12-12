@@ -1,3 +1,4 @@
 baseURL = "http://feliperodopoulos.com/"
-DefaultContentLanguage = "en"
 title = "felipe rodopoulos"
+languageCode = "en-us"
+googleAnalytics = ""
