@@ -1,5 +1,11 @@
 .hdr {
   background: $blue;
   color: $white;
-  // padding: 
+  padding: 1em;
+  overflow: auto;
+}
+
+.logo {
+  width: 80%;
+  float: left;
 }
