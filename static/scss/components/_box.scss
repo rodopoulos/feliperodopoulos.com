@@ -1,9 +1,13 @@
 .box {
   background: $white;
-  border-top: $default-border;
-  border-bottom: $default-border;
+  border-top: $border;
+  border-bottom: $border;
+
+  @include respond-to('large') {
+    border: $border;
+  }
 }
 
-.box__txt {
-  margin: 1em;
+.box-pad {
+  padding: 1.5em;
 }

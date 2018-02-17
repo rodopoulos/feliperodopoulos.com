@@ -1,6 +1,8 @@
 @import
-  'abstracts/variables';
-
+  'utils/helpers',
+  'utils/mixins',
+  'utils/variables';
+  
 @import
   'base/base',
   'base/reset',
@@ -16,4 +18,5 @@
 @import
   'layout/header',
   'layout/navigation',
-  'layout/footer';
+  'layout/footer',
+  'layout/page';
