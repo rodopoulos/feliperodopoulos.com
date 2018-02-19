@@ -5,6 +5,7 @@ var nano = require('gulp-cssnano');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var prefix = require('gulp-autoprefixer');
+var groupqueries = require('gulp-group-css-media-queries');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
@@ -29,6 +30,7 @@ gulp.task('sass', function() {
 gulp.task('css', ['sass'], function() {
   return gulp.src(build.css + 'style.css')
     .pipe(prefix('last 5 versions'))
+    .pipe(groupqueries())
     .pipe(nano())
     .pipe(gulp.dest(build.css))
     .pipe(reload({stream: true}));
