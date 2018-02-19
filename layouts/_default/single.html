@@ -1,11 +1,15 @@
 {{ partial "header/header.html" . }}
 
-<article>
-  <header>
-    <h1>{{ .Title }}</h1>
-    <p>Publicado em {{ .Date }}</p>
+<main class="page">
+  <header class="page-hdr">
+    <h1 class="ttl">
+      <span class="stroke">{{ .Title }}</span>
+    </h1>
   </header>
-  <div class="textual">{{ .Content }}</div>
-</article>
+
+  <div class="box box-pad">
+    {{- .Content -}}
+  </div>
+</main>
 
 {{ partial "footer/footer.html" . }}
