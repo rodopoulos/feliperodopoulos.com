@@ -3,7 +3,7 @@
   border-top: $border;
   border-bottom: $border;
 
-  @include respond-to('large') {
+  @include respond-to('medium') {
     border: $border;
   }
 }

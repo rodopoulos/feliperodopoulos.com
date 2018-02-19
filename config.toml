@@ -2,3 +2,8 @@ baseURL = "http://feliperodopoulos.com/"
 title = "felipe rodopoulos"
 languageCode = "en-us"
 googleAnalytics = ""
+
+[params]
+  phone = "+ 55 61 99234 2360"
+  email = "felipekss@gmail.com"
+  github = "github.com/rodopoulos"

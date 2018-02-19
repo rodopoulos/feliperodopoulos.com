@@ -1,8 +1,19 @@
+// SPACING HELPERS
 .pad { padding: 1.5em; }
+.mrgu { margin: 1.5em 0 0; }
+.mrgb { margin: 0 0 1.5em; }
+.mrgb2 { margin: 0 0 .75em; }
+.mrg0 { margin: 0; }
 
+// TYPOGRAPHIC HELPERS
 .stroke { box-shadow: inset 0 -4px 0 $black; }
 .stroke--inv { box-shadow: inset 0 -4px 0 $white; }
 
+.bold { font-weight: bold; }
+.upper { text-transform: uppercase; }
+
+
+// RESPONSIVE HELPERS
 .mob {
   @include respond-to('large') {
     display: none;
