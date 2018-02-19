@@ -8,4 +8,8 @@
 .logo {
   width: 80%;
   float: left;
+
+  @include respond-to('large') {
+    width: 25%;
+  }
 }

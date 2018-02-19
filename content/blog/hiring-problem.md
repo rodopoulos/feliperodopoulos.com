@@ -1,5 +1,6 @@
 ---
 title: "Algoritmos Randômicos e o Hiring Problem"
+linktitle: "post"
 slug: "algoritmos-randomicos-e-hiring-problem"
 description:
 date:
