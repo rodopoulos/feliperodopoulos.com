@@ -8,9 +8,10 @@
   }
 }
 
-.box--small {
-  max-width: 80%;
-}
+.box--wrap { @extend .wrap; }
+
+// TODO: why the fuck do I need !important here?
+.box--small { max-width: $size-small-box !important; }
 
 .box--outset {
   position: relative;
