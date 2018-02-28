@@ -1,0 +1,18 @@
+{{ range $.Site.Data.cv.education.main }}
+  <div class="item">
+    <h2>
+      <span class="stroke">
+        {{ dateFormat "01.2006" .date_start }}
+        <i>icon</i>
+        {{ if .date_end }}
+          {{ dateFormat "01.2006" .date_end }}
+        {{ end }}
+      </span>
+    </h2>
+    <b>{{ .name }}</b> <span class="detail">{{ .where }}</span>
+    {{ range .remarks }}
+      <br>
+      <b>{{ .name }}</b> <span class="detail">{{ .desc }}</span>
+    {{ end }}
+  </div>
+{{ end }}
