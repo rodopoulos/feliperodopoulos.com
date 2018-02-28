@@ -1,4 +1,4 @@
-{{ range $.Site.Data.cv.education.main }}
+{{ range $.Site.Data.cv.experience.main }}
   <div class="item mrgb">
     <h2 class="mrgb2">
       <span class="stroke">
@@ -12,6 +12,8 @@
 
     <b><span class="lower breath">{{ .name }}</span></b>
     <span class="litem lower">{{ .where }}</span>
+
+    <p class="margb2">{{ .desc }}</p>
 
     {{ if .remarks }}
       <dl class="remarks">
