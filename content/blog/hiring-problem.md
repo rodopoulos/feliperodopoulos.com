@@ -68,36 +68,38 @@ X_A = \begin{cases}
 1  & \text{, se $A$ acontence}
 \end{cases}
 $$
-Dado que $A$ pode ocorrer ou não, temos uma probabilidade igual dele acontecer ou não. Logo, $Pr\{A\ \text{ocorrer}\} = Pr\{A\ \text{não ocorrer}\} = \frac{1}{2}$, onde $Pr$ é a probabilidade do evento. Agora, vamos usar outro conceito chamado **esperança**: o valor médio que se espera de um evento, a medida que ele ocorre. Para cálcular-lo basta somar as probabilidades dos eventos com seus respectivos valores. No caso do nosso indicador $X_A$, temos que:
+Dado que $A$ pode ocorrer ou não, temos uma probabilidade igual dele acontecer ou não. Logo, $Pr\\{A\ \text{ocorrer}\\} = Pr\\{A\ \text{não ocorrer}\\} = \frac{1}{2}$, onde $Pr$ é a probabilidade do evento. Agora, vamos usar outro conceito chamado **esperança**: o valor médio que se espera de um evento, a medida que ele ocorre. Para cálcular-lo basta somar as probabilidades dos eventos com seus respectivos valores. No caso do nosso indicador $X_A$, temos que:
 $$
-\begin{split}
-E[X_A] & =  0 \cdot Pr\{A\ \text{não ocorre}\} + 1 \cdot Pr\{A\ \text{ocorre}\} \\
-& = 0 \cdot \frac{1}{2} + 1 \cdot \frac{1}{2} \\
-& = \frac{1}{2}
-\end{split}
+  \begin{split}
+    E[X_A] & = 0 \cdot Pr\\{A\ \text{não ocorre}\\} + 1 \cdot Pr\\{A\ \text{ocorre}\\} \\
+    & = 0 \cdot \frac{1}{2} + 1 \cdot \frac{1}{2} \\
+    & = \frac{1}{2}
+  \end{split}
 $$
-Observe que a esperança de um evento é igual a probabilidade dele acontecer, ou seja, $E[X_A] = Pr\{A\ \text{ocorre}\}$! Neste exemplo, isto acaba sendo óbvio, pois só temos duas possibilidades: ou $A$ acontece ou $A$ não acontece. Isso está relacionado ao nosso **espaço amostral** $S$, onde, neste exemplo, $S = \{A\ \text{ocorre}, A\ \text{não ocorre}\}$ e só temos duas possibilidades e fica fácil derivar a probabilidade de $\frac{1}{2}$. Observe então que temos um lema!
+Observe que a esperança de um evento é igual a probabilidade dele acontecer, ou seja, $E[X_A] = Pr\\{A\ \text{ocorre}\\}$! Neste exemplo, isto acaba sendo óbvio, pois só temos duas possibilidades: ou $A$ acontece ou $A$ não acontece. Isso está relacionado ao nosso **espaço amostral** $S$, onde, neste exemplo, $S = \\{A\ \text{ocorre}, A\ \text{não ocorre}\\}$ e só temos duas possibilidades e fica fácil derivar a probabilidade de $\frac{1}{2}$. Observe então que temos um lema!
 
 > **Lema:** a esperança um evento acontecer é igual a probabilidade dele acontecer
 
-Dito isso, vamos voltar ao nosso problema inicial. Perceba que aqui, o espaço amostral é diferente: $S = \{$candidato 1 é contratado, candidato 2 é contradado, ..., candidato $n$ é contratado$\}$ (para facilitar, vamos escrever $S = \{1,2, ..., n\})$. Ao invés de começar por um indicador de variável aletória para o problema geral, vamos dividir o problema e definir a variável aleatória $X_i$:
+Dito isso, vamos voltar ao nosso problema inicial. Perceba que aqui, o espaço amostral é diferente: $S = \\{$candidato 1 é contratado, candidato 2 é contradado, ..., candidato $n$ é contratado$\\}$ (para facilitar, vamos escrever $S = \\{1,2, ..., n\\})$. Ao invés de começar por um indicador de variável aletória para o problema geral, vamos dividir o problema e definir a variável aleatória $X_i$:
 $$
-X_i = \begin{cases}
-0 & \text{, se o candidato $i$ não é contratado} \\
-1  & \text{, se o candidato $i$ é contratado}
-\end{cases}
+  X_i = \begin{cases}
+    0 & \text{, se o candidato $i$ não é contratado} \\
+    1  & \text{, se o candidato $i$ é contratado}
+  \end{cases}
 $$
-Logo, temos que $E[X_i]$, a esperança do $i$-ésimo candidato ser contratado é justamente igual a probabilidade dele ser contratado ou não. Então vamos focar nossa discussão aqui. Para que o $i$-ésimo candidato seja contratado, ele tem que ser melhor que os $i-1$ candidatos anteriores. Como assumimos que eles estão em ordem aleatória, então cada um destes $i$ candidatos tem a mesma probabilidade de ser o melhor, logo $Pr\{$candidato $i$ é contratdo$\} = \frac{1}{i}$.
+Logo, temos que $E[X_i]$, a esperança do $i$-ésimo candidato ser contratado é justamente igual a probabilidade dele ser contratado ou não. Então vamos focar nossa discussão aqui. Para que o $i$-ésimo candidato seja contratado, ele tem que ser melhor que os $i-1$ candidatos anteriores. Como assumimos que eles estão em ordem aleatória, então cada um destes $i$ candidatos tem a mesma probabilidade de ser o melhor, logo $Pr\\{$candidato $i$ é contratado$\\} = \frac{1}{i}$.
 
 Ok, temos a esperança de um $i$-ésimo candidato ser o melhor, mas e o problema geral? Vamos somar tudo! Definimos $X = X_1 + X_2 + ... + X_n$. Agora, podemos obter a esperança geral de todo o processo de saber quem é o melhor candidato ao longo dos $n$ candidatos:
+
 $$
-\begin{split}
-E[X] & = E[X_1] + E[X_2]  + ... + E[X_i] \\
-& = \sum_{i=1}^{n} E[X_i] \\
-& = \sum_{i=1}^{n} \frac{1}{i} \\
-& = ln\ n
-\end{split}
+  \begin{split}
+    E[X] & = E[X_1] + E[X_2]  + ... + E[X_i] \\
+    & = \sum_{i=1}^{n} E[X_i] \\
+    & = \sum_{i=1}^{n} \frac{1}{i} \\
+    & = ln\ n
+  \end{split}
 $$
+
 Finalmente, temos o nosso resultado: quando entrevistamos $n$ pessoas, vamos contratar, em média, $ln\ n$ pessoas.
 
 ## Solução
