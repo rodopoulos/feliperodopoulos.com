@@ -1,16 +1,17 @@
 // SPACING HELPERS
 .pad { padding: 1.5em; }
+.pad-x { padding: 2.5em; }
+.pad0 { padding: 0; }
+
 .mrgu { margin: 1.5em 0 0; }
 .mrgb { margin: 0 0 1.5em; }
 .mrgb2 { margin: 0 0 .75em; }
 .mrg0 { margin: 0; }
 
-// TYPOGRAPHIC HELPERS
-.stroke { box-shadow: inset 0 -4px 0 $black; }
-.stroke--inv { box-shadow: inset 0 -4px 0 $white; }
-
-.bold { font-weight: bold; }
-.upper { text-transform: uppercase; }
+// -- Underline Strokes
+.stroke, .stk { box-shadow: inset 0 -4px 0 $black; }
+.stroke--inv, .stk--white { box-shadow: inset 0 -4px 0 $white; }
+.stk--small { box-shadow: inset 0 -2px 0; }
 
 
 // RESPONSIVE HELPERS

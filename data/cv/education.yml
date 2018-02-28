@@ -1,5 +1,13 @@
 main:
   -
+    name: Mestrado em Informática
+    where: Universidade de Brasília (UnB)
+    date_start: 2017-02-01
+    remarks:
+      -
+        name: tema
+        desc: Formalização e Verificação de Protocolos de Segurança
+  -
     name: Bacharelado em Ciência da Computação
     where: Universidade de Brasília (UnB)
     date_start: 2010-08-01
@@ -9,17 +17,17 @@ main:
         name: projeto final
         desc: Monitoramento e Visualização de Tráfego Web de uma Vítima em Tempo Real
       -
+        name: PIBIC (2013)
+        desc: Estudo de Modelos de Integração em Workflows Científicos
+      - name: Monitoria
+        list:
+          - Programação Sistemática (2º/2012, 1º/2013, 1º/2014)
+          - Autômatos e Computabilidade (2º/2014)
+          - Compiladores (1º e 2º/2015)
+      -
         name: null
         desc: premiado como aluno destaque do semestre
-        star: true
-  -
-    name: Mestrado em Informática
-    where: Universidade de Brasília (UnB)
-    date_start: 2017-02-01
-    remarks:
-      -
-        name: tema
-        desc: Formalização e Verificação de Protocol de Segurança
+        emph: true
 aditional:
   -
     name: Inglês Avançado
