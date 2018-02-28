@@ -95,8 +95,8 @@ blockquote {
 
 // -- data list with table design
 .remarks {
-  width: 100%;
   overflow: auto;
+  width: 100%;
 
   dt, dd {
     float: left;
@@ -104,10 +104,12 @@ blockquote {
   }
 
   dt {
-    min-width: 16%;
+    clear: left;
+    width: 18%;
     margin-right: 2%;
-    display: list-item;
   }
 
-  dd { width: 80%; }
+  dd {
+    width: 80%;
+  }
 }
