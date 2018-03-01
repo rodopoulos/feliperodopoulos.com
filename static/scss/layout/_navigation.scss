@@ -1,6 +1,4 @@
-.nav {
-  list-style: none;
-}
+.nav { list-style: none; }
 
 .menu {
   font-size: 2em;
@@ -16,6 +14,7 @@
   z-index: 10;
   height: 100vh;
   top: -9999px;
+  // top: 0;
   left: 0;
   transition: top 0.8s ease;
 
