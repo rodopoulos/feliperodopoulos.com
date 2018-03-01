@@ -4,7 +4,7 @@
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
       <li class="menu__li">
-        <a href="{{.URL}}" class="menu__a {{if ($currentPage.IsMenuCurrent "main" .) }}stroke--inv{{end}}">
+        <a href="{{.URL}}" class="menu__a {{if ($currentPage.IsMenuCurrent "main" .) }}stk--small{{end}}">
           {{ .Name }}
         </a>
       </li>

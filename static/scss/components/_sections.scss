@@ -1,4 +1,6 @@
 .sec {
+  overflow: auto;
+  height: auto;
   min-height: 100vh; // TODO: relaying on this is dangerous
 
   // Background Gradient

@@ -73,12 +73,17 @@ blockquote {
 
 
 // EXTRAS
+// -- size helpers
+.f0 { font-size: 1rem; }
+.f1 { font-size: 1.2rem; }
+.f2 { font-size: 1.5rem; }
+
 // -- typographic helpers
 .bold { font-weight: bold; }
 .upper { text-transform: uppercase; }
 .lower { text-transform: lowercase; }
 .emph { color: $blue; }
-.fnormal { text-decoration: none; }
+.tnormal { text-decoration: none; }
 
 // -- typographic space
 .breath { margin-right: 1em; }
