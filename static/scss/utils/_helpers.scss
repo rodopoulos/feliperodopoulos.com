@@ -27,7 +27,7 @@
 
 // RESPONSIVE HELPERS
 .mob {
-  @include respond-to('large') {
+  @include respond-to('medium') {
     display: none;
   }
 }

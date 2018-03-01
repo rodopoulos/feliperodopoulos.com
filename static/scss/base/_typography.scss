@@ -49,6 +49,8 @@ blockquote {
   margin: 0 0 1.5em;
 }
 
+p { line-height: 1.75; }
+
 pre {
   padding: 1em 0.75em;
   vertical-align : bottom;
@@ -75,7 +77,10 @@ blockquote {
 // EXTRAS
 // -- size helpers
 .f0 { font-size: 1rem; }
-.f1 { font-size: 1.2rem; }
+.f1 { font-size: 1.1rem; }
+.f2 { font-size: 1.2rem; }
+.f3 { font-size: 1.3rem; }
+.f4 { font-size: 1.4rem; }
 .f2 { font-size: 1.5rem; }
 
 // -- typographic helpers
