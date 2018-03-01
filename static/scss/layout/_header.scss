@@ -1,8 +1,10 @@
-.hdr {
+.header {
   background: $blue;
   color: $white;
   padding: 1em;
   overflow: auto;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -10,7 +12,7 @@
   float: left;
 
   @include respond-to('medium') {
-    width: 50%;
+    width: 45%;
   }
 
   @include respond-to('large') {
