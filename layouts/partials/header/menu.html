@@ -1,5 +1,8 @@
 <nav class="nav menu">
-  <button class="btn btn--menu__cls mob js-menu-x">&times;</button>
+  <button class="btn btn--navcls mob js-menu-x">
+    {{ readFile "static/icons/close.svg" | safeHTML }}
+  </button>
+
   <ul class="menu__ul">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
@@ -11,4 +14,6 @@
     {{ end }}
   </ul>
 </nav>
-<button class="btn btn--menu__opn mob js-menu-o">&times;</button>
+<button class="btn btn--menu mob js-menu-o">
+  {{ readFile "static/icons/menu.svg" | safeHTML }}
+</button>

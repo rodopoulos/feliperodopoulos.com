@@ -5,15 +5,19 @@
 }
 
 // TODO: not seeming right...
-.btn--menu__cls {
+.btn--navcls {
+  padding: 0;
   position: absolute;
   top: 2%;
   right: 8%;
-  font-size: 2em;
+  fill: $white;
 }
 
-.btn--menu__opn {
-  float: right;
-  font-size: 2em;
-  line-height: .5em;
+.btn--menu {
+  padding: 0;
+  width: 7%;
+  max-width: 45px;
+  fill: $white;
 }
+
+.icon { display: block; }
