@@ -28,7 +28,7 @@ main:
         name: null
         desc: premiado como aluno destaque do semestre
         emph: true
-aditional:
+additional:
   -
     name: Inglês Avançado
     year: 2008
