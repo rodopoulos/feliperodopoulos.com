@@ -1,4 +1,4 @@
-// SPACING HELPERS
+// SPACE
 .pad { padding: 1.5em; }
 .pad-x { padding: 2.5em; }
 .pad0 { padding: 0; }
@@ -18,10 +18,17 @@
 .stroke--inv, .stk--white { box-shadow: inset 0 -4px 0 $white; }
 .stk--small { box-shadow: inset 0 -2px 0; }
 
-// OTHER HELPERS
+// TEXTUAL
+.txt {
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// LIST
 .nobullet { list-style: none; }
 
-// RESPONSIVE HELPERS
+// RESPONSIVE
 .mob {
   @include respond-to('medium') {
     display: none;
