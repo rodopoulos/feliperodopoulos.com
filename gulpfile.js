@@ -1,46 +1,41 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var watch = require('gulp-watch');
-var nano = require('gulp-cssnano');
-var concat = require('gulp-concat');
-var imagemin = require('gulp-imagemin');
-var prefix = require('gulp-autoprefixer');
-var groupqueries = require('gulp-group-css-media-queries');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
+const gulp = require('gulp')
+const sass = require('gulp-sass')
+const rename = require('gulp-rename')
+const nano = require('gulp-cssnano')
+const imagemin = require('gulp-imagemin')
+const autoprefix = require('gulp-autoprefixer')
+const groupqueries = require('gulp-group-css-media-queries')
+const purgecss = require('gulp-purgecss')
+const browserSync = require('browser-sync')
+const reload = browserSync.reload
 
-
-var raw = {
+const raw = {
   scss: './static/scss/',
   img: './static/img/raw/',
-};
+}
 
-var build = {
+const build = {
   css: './static/css/',
   img: './static/img/'
-};
+}
 
-gulp.task('sass', function() {
+gulp.task('css', function() {
   return gulp.src(raw.scss + 'main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(concat('style.css'))
-    .pipe(gulp.dest(build.css));
-});
-
-gulp.task('css', ['sass'], function() {
-  return gulp.src(build.css + 'style.css')
-    .pipe(prefix('last 5 versions'))
+    .pipe(autoprefix())
     .pipe(groupqueries())
     .pipe(nano())
+    .pipe(rename((path) => { path.extname = ".css" }))
+    .pipe(purgecss({ content: ['layouts/**/*.html'] }))
     .pipe(gulp.dest(build.css))
-    .pipe(reload({stream: true}));
-});
+    .pipe(browserSync.reload({stream: true}))
+})
 
 gulp.task('img', function() {
   return gulp.src(raw.img + '*.*')
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.mozjpeg({progressive: true}),
     	imagemin.optipng({optimizationLevel: 5}),
     	imagemin.svgo({
     		plugins: [
@@ -49,16 +44,16 @@ gulp.task('img', function() {
     		]
     	})
     ], {verbose: true}))
-    .pipe(gulp.dest(build.img));
-});
+    .pipe(gulp.dest(build.img))
+})
 
 gulp.task('browser-sync', function () {
 	browserSync.init({
 		proxy: "localhost:1313",
 		notify: false
-	});
+	})
 
-  gulp.watch(raw.scss + '**/*.scss', ['sass', 'css']).on('change', reload);
-});
+  gulp.watch(raw.scss + '**/*.scss').on('change', reload)
+})
 
-gulp.task('default', ['css', 'img', 'browser-sync']);
+exports.default = gulp.series('css', 'img', 'browser-sync')
