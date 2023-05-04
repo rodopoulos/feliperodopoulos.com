@@ -1,0 +1,21 @@
+.sec {
+  overflow: auto;
+  height: auto;
+  min-height: 100vh; // TODO: relaying on this is dangerous
+
+  // Background Gradient
+  // TODO: have to improve this...
+  background :    -moz-linear-gradient(top,  $gray 85%, $blue 100%); /* FF3.6-15 */
+  background : -webkit-linear-gradient(top,  $gray 85%, $blue 100%); /* Chrome10-25,Safari5.1-6 */
+  background :   linear-gradient(to bottom,  $gray 85%, $blue 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gray', endColorstr='$blue',GradientType=0 ); /* IE6-9 */
+}
+
+.hdr {
+  @extend .pad;
+  text-align: center;
+
+  @include respond-to('medium'){
+    margin: 0 0 1.5em;
+  };
+}

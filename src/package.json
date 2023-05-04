@@ -1,0 +1,39 @@
+{
+  "name": "feliperodopoulos.com",
+  "version": "1.0.0",
+  "description": "my personal website",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp-group-css-media-queries": "^1.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodopoulos/feliperodopoulos.com.git"
+  },
+  "keywords": [
+    "personal",
+    "site",
+    "hugo",
+    "felipe",
+    "rodopoulos"
+  ],
+  "author": "Felipe Rodopoulos",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rodopoulos/feliperodopoulos.com/issues"
+  },
+  "homepage": "https://github.com/rodopoulos/feliperodopoulos.com#readme"
+}

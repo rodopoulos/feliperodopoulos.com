@@ -1,0 +1,22 @@
+.header {
+  background: $blue;
+  color: $white;
+  padding: 1em;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 80%;
+  float: left;
+
+  @include respond-to('medium') {
+    width: 45%;
+  }
+
+  @include respond-to('large') {
+    width: 25%;
+  }
+}

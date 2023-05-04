@@ -1,0 +1,31 @@
+.box {
+  background: $white;
+  border-top: $border;
+  border-bottom: $border;
+
+  @include respond-to('medium') {
+    border: $border;
+  }
+}
+
+.box--wrap { @extend .wrap; }
+
+// TODO: why the fuck do I need !important here?
+.box--small { max-width: $size-small-box !important; }
+
+.box--outset {
+  position: relative;
+  z-index: 2;
+
+  &:after {
+    content: "";
+    background: $white;
+    border: $border;
+		top: 8px;
+    left: 8px;
+    width: 100%;
+    height: 100%;
+    position : absolute;
+    z-index: -2;
+  }
+}

@@ -1,0 +1,38 @@
+{{ range $.Site.Data.cv.experience.main }}
+  <div class="item mrgb">
+    <h2 class="mrgb2">
+      <span class="stroke">
+        {{ dateFormat "01.2006" .date_start }}
+        <i>icon</i>
+        {{ if .date_end }}
+          {{ dateFormat "01.2006" .date_end }}
+        {{ end }}
+      </span>
+    </h2>
+
+    <b><span class="lower breath">{{ .name }}</span></b>
+    <span class="litem lower">{{ .where }}</span>
+
+    <p class="margb2">{{ .desc }}</p>
+
+    {{ if .remarks }}
+      <dl class="remarks">
+        {{ range .remarks }}
+          <dt>{{ .name }}</dt>
+
+          {{ if .desc }}
+            <dd class="litem {{ if .emph }} emph {{ end }}">{{ .desc }}</dd>
+          {{ end }}
+
+          {{ if .list }}
+            <dd>
+              {{ range .list }}
+                <span class="litem">{{ . }}</span><br>
+              {{ end }}
+            </dd>
+          {{ end }}
+        {{ end }}
+      </dl>
+    {{ end }}
+  </div>
+{{ end }}

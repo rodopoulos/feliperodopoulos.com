@@ -1,0 +1,36 @@
+// SPACE
+.pad { padding: 1.5em; }
+.pad-x { padding: 2.5em; }
+.pad0 { padding: 0; }
+
+.mrg0 { margin: 0; }
+
+.mrgu, .mt { margin: 1.5em 0 0; }
+
+.mb-s { margin: 0 0 0.5em; }
+.mrgb2, .mb-m { margin: 0 0 0.75em; }
+.mrgb, .mb-l { margin: 0 0 1.5em; }
+.mb-x { margin: 0 0 2em; }
+.mb-last { margin-bottom: 6em; }
+
+// STROKES
+.stroke, .stk { box-shadow: inset 0 -4px 0 $black; }
+.stroke--inv, .stk--white { box-shadow: inset 0 -4px 0 $white; }
+.stk--small { box-shadow: inset 0 -2px 0; }
+
+// TEXTUAL
+.txt {
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// LIST
+.nobullet { list-style: none; }
+
+// RESPONSIVE
+.mob {
+  @include respond-to('medium') {
+    display: none;
+  }
+}

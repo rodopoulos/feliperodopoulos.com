@@ -1,0 +1,15 @@
+{{ partial "header/header.html" . }}
+
+<main class="page">
+  <header class="page-hdr">
+    <h1 class="ttl">
+      <span class="stk">{{ .Title }}</span>
+    </h1>
+  </header>
+
+  <div class="box pad">
+    {{- .Content -}}
+  </div>
+</main>
+
+{{ partial "footer/footer.html" . }}

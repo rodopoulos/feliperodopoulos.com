@@ -1,0 +1,10 @@
+<ul class="mrg0">
+  {{ range $.Site.Data.cv.education.additional }}
+    <li class="mrg2">
+      <b class="breathe">{{ .year }}</b>
+      <span class="litem">{{ .name }}</span><br>
+      <span> {{ .where }} {{ if .hours }}({{ .hours }}){{ end }}
+      </span>
+    </li>
+  {{ end }}
+</ul>

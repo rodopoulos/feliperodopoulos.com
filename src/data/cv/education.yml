@@ -1,0 +1,50 @@
+main:
+  -
+    name: Mestrado em Informática
+    where: Universidade de Brasília (UnB)
+    date_start: 2017-02-01
+    remarks:
+      -
+        name: tema
+        desc: Formalização e Verificação de Protocolos de Segurança
+  -
+    name: Bacharelado em Ciência da Computação
+    where: Universidade de Brasília (UnB)
+    date_start: 2010-08-01
+    date_end: 2015-07-01
+    remarks:
+      -
+        name: projeto final
+        desc: Monitoramento e Visualização de Tráfego Web de uma Vítima em Tempo Real
+      -
+        name: PIBIC (2013)
+        desc: Estudo de Modelos de Integração em Workflows Científicos
+      - name: Monitoria
+        list:
+          - Programação Sistemática (2º/2012, 1º/2013, 1º/2014)
+          - Autômatos e Computabilidade (2º/2014)
+          - Compiladores (1º e 2º/2015)
+      -
+        name: null
+        desc: premiado como aluno destaque do semestre
+        emph: true
+additional:
+  -
+    name: Inglês Avançado
+    year: 2008
+    where: Casa Thomas Jefferson
+  -
+    name: Java e Orientação à Objetos
+    year: 2013
+    where: Caelum
+    hours: 40 horas
+  -
+    name: Programação Front-end com JavaScript e jQuery
+    year: 2015
+    where: Caelum
+    hours: 40 horas
+  -
+    name: Curso Básico de Raspberry Pi
+    year: 2016
+    where: 4flyers
+    hours: 16 horas
