@@ -17,3 +17,6 @@ package-lock.json
 
 # Terraform stuff
 .terraform*
+
+public
+.hugo_build.lock
